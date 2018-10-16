@@ -219,7 +219,7 @@ OpalCompiler class >> stopUsingOverlayForDevelopment [
 ]
 
 { #category : #plugins }
-OpalCompiler >> addPlugin: aClass [ 
+OpalCompiler >> addPlugin: aClass [
 	compilationContext addASTTransformationPlugin: aClass
 ]
 
