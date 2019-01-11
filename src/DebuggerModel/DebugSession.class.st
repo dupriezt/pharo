@@ -237,7 +237,7 @@ DebugSession >> isInterruptedContextDoesNotUnderstand [
 
 { #category : #context }
 DebugSession >> isLatestContext: aContext [
-
+	"Answer whether aContext is the context at the top of the stack of the suspended process"
 	^ interruptedProcess suspendedContext == aContext
 ]
 
