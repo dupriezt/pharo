@@ -163,6 +163,7 @@ DebugSession >> errorWasInUIProcess: aBoolean [
 
 { #category : #evaluating }
 DebugSession >> implement: aMessage classified: aSymbol inClass: aClass forContext: aContext [
+	"Called when the DebugSession was created for a missing method (for example when a DoesNotUnderstand or SubclassResponsibility exception is raised). This method compiles a template of the missing method and changes the interruptedContext to make the debug session look as if it had been opened directly on this template method, allowing the user to modify it."
 	
 	aClass
 		compile: (DynamicMessageImplementor for: aMessage in: aClass) value
