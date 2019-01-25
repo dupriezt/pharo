@@ -2372,8 +2372,58 @@ UITheme >> glamourCheckboxWidth [
 ]
 
 { #category : #'accessing colors' }
+UITheme >> glamourContentBackgroundColor [
+	^ Color white
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourEditableLabelBorderColor [
+	"emerald"
+	^ Color r: 46 g: 204 b: 113 range: 255
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourEditableLabelBorderColorCancel [
+	"alizarin"
+	^ Color r: 231 g: 76 b: 60 range: 255
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourFocusedBorderColor [
+	"peter river"
+	^ Color r: 52 g: 152 b: 219 range: 255
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourFocusedBorderColorZeroAlpha [
+
+	^ self glamourFocusedBorderColor alpha: 0
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourFocusedBorderWidth [
+	^ 1
+]
+
+{ #category : #'accessing colors' }
 UITheme >> glamourLightTextColor [
 	^ Color gray
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourNormalBorderColor [
+	"silver"
+	^ Color r: 189 g: 195 b: 199 range: 255
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupContentBackgroundColor [
+	^ Color transparent
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupContentPadding [
+	^ 0
 ]
 
 { #category : #'accessing colors' }
@@ -2386,6 +2436,62 @@ UITheme >> glamourPopupHelperBackgroundColor [
 UITheme >> glamourPopupHelperBorderColorWithAlpha [
 
 	^ (Color r: 48 g:194 b:240 range: 255 ) alpha: 0.6
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupShadowColor [
+	^ Color black alpha: 0.5
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupShadowInset [
+	^ 0
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupShadowOffset [
+	^ 0@0
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupShadowWidth [
+	^ 0
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupSpacing [
+	^ 0
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupTextColor [
+	"darken"
+	^ Color r: 29 g: 29 b: 29 range: 255
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourRubricBackgroundColor [
+	^ self glamourContentBackgroundColor
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourRubricBorderColor [
+	^ Color transparent
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourRubricBorderWidth [
+	^ 0
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourRubricCursorColor [
+	^ self glamourRubricTextColor
+]
+
+{ #category : #'as yet unclassified' }
+UITheme >> glamourTextColorFor: aGlamourElement [
+	
 ]
 
 { #category : #'border-styles' }

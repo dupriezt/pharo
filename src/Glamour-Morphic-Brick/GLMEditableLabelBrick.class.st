@@ -45,7 +45,7 @@ GLMEditableLabelBrick class >> gtExample [
 GLMEditableLabelBrick >> accept [
 
 	self text: self editBrick text.
-	self borderColor: self themer color emerald.
+	self borderColor: Smalltalk ui theme glamourEditableLabelBorderColor.
 	self beNormal
 ]
 
@@ -54,7 +54,7 @@ GLMEditableLabelBrick >> animateToEditFocused [
 
 	self borderAnimation
 		from: self borderColor first;
-		to: self themer focusedBorderColor;
+		to: Smalltalk ui theme glamourFocusedBorderColor;
 		animate: self
 ]
 
@@ -63,7 +63,7 @@ GLMEditableLabelBrick >> animateToEditNotFocused [
 
 	self borderAnimation
 		from: self borderColor first;
-		to: self themer normalBorderColor;
+		to: Smalltalk ui theme glamourNormalBorderColor;
 		animate: self
 ]
 
@@ -99,7 +99,7 @@ GLMEditableLabelBrick >> beEdit [
 
 	self addBrickFirst: self editBrick.
 	self removeBrick: self labelBrick.
-	self borderColor: (self themer focusedBorderColor alpha: 0).
+	self borderColor: Smalltalk ui theme glamourFocusedBorderColorZeroAlpha.
 	self editBrick rubric takeKeyboardFocus.
 	self announce: #onEditMode
 ]
@@ -124,7 +124,7 @@ GLMEditableLabelBrick >> borderAnimation [
 { #category : #'label-brick-actions' }
 GLMEditableLabelBrick >> cancel [
 
-	self borderColor: self themer color alizarin.
+	self borderColor: Smalltalk ui theme glamourEditableLabelBorderColorCancel.
 	self beNormal
 ]
 
@@ -166,8 +166,8 @@ GLMEditableLabelBrick >> editBrick: aBrick [
 		withoutBorder;
 		beTransparent;
 		autoAccept: true;
-		rubricTextFamilyName: self themer textFamilyName;
-		rubricTextFontSize: self themer textFontSize.
+		rubricTextFamilyName: Smalltalk ui theme labelFont familyName;
+		rubricTextFontSize: Smalltalk ui theme labelFont pointSize.
 	
 	self editBrick rubric forceHeight: [ self labelBrick height ].
 	
@@ -201,8 +201,8 @@ GLMEditableLabelBrick >> initialize [
 	self editBrick: self newEditBrick.
 	
 	self
-		padding: self themer focusedBorderWidth;
-		borderWidth: self themer focusedBorderWidth;
+		padding: Smalltalk ui theme glamourFocusedBorderWidth;
+		borderWidth: Smalltalk ui theme glamourFocusedBorderWidth;
 		hShrinkWrap;
 		vShrinkWrap;
 		enable;

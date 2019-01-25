@@ -106,7 +106,7 @@ GLMRubScrolledTextBrick >> rubric: aMorph [
 { #category : #'brick-properties' }
 GLMRubScrolledTextBrick >> rubricBackgroundColor [
 
-	^ self valueOfProperty: #brickRubricBackgroundColor ifAbsent: [ self themer rubricBackgroundColor ]
+	^ self valueOfProperty: #brickRubricBackgroundColor ifAbsent: [ Smalltalk ui theme glamourRubricBackgroundColor ]
 ]
 
 { #category : #'brick-properties' }
@@ -119,7 +119,7 @@ GLMRubScrolledTextBrick >> rubricBackgroundColor: aColor [
 { #category : #'brick-properties' }
 GLMRubScrolledTextBrick >> rubricBorderColor [
 
-	^ self valueOfProperty: #brickRubricBorderColor ifAbsent: [ self themer rubricBorderColor ]
+	^ self valueOfProperty: #brickRubricBorderColor ifAbsent: [ Smalltalk ui theme glamourRubricBorderColor ]
 ]
 
 { #category : #'brick-properties' }
@@ -132,7 +132,7 @@ GLMRubScrolledTextBrick >> rubricBorderColor: aColor [
 { #category : #'brick-properties' }
 GLMRubScrolledTextBrick >> rubricBorderWidth [
 
-	^ self valueOfProperty: #brickRubricBorderWidth ifAbsent: [ self themer rubricBorderWidth ]
+	^ self valueOfProperty: #brickRubricBorderWidth ifAbsent: [ Smalltalk ui theme glamourRubricBorderWidth ]
 ]
 
 { #category : #'brick-properties' }

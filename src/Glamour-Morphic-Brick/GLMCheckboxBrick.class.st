@@ -92,7 +92,7 @@ GLMCheckboxBrick >> checkBrick: anObject [
 		borderColor: Smalltalk ui theme glamourCheckboxBorderColor;
 		borderWidth: Smalltalk ui theme glamourCheckboxBorderWidth;
 		vAlign: #center;
-		checkedImage: self themer checkboxCheckedImage;
+		checkedImage: (self iconNamed: #glamorousAccept);
 		width: Smalltalk ui theme glamourCheckboxWidth;
 		height: Smalltalk ui theme glamourCheckboxHeight.
 		

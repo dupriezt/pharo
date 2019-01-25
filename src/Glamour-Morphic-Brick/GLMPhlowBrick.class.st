@@ -49,7 +49,7 @@ GLMPhlowBrick >> newTitleBrick [
 GLMPhlowBrick >> onThemerChanged [
 	super onThemerChanged.
 	
-	self titleBrick textColor: self themer textLightColor
+	self titleBrick textColor: Smalltalk ui theme glamourLightTextColor
 ]
 
 { #category : #accessing }

@@ -196,8 +196,8 @@ GLMEmptyPopupBrick >> initialize [
 	anchorBrick := Morph new extent: 1@1.
 	popupLayout := self defaultPopupLayout.
 	closer := self defaultCloser.
-	inset := self themer popupThemer inset asMargin.
-	spacing := self themer popupThemer spacing.
+	inset := Smalltalk ui theme borderWidth asMargin.
+	spacing := Smalltalk ui theme glamourPopupSpacing.
 
 	self
 		initializeListeners;
@@ -295,25 +295,22 @@ GLMEmptyPopupBrick >> onOpened [
 
 { #category : #'popup - hooks' }
 GLMEmptyPopupBrick >> onThemerChanged [
-	| aThemer |
 	super onThemerChanged.
+
+	self color: Smalltalk ui theme backgroundColor.
+	self borderWidth: Smalltalk ui theme borderWidth.
+	self borderColor: Smalltalk ui theme borderColor.
+
+	self inset: Smalltalk ui theme borderWidth.
+	self spacing: Smalltalk ui theme glamourPopupSpacing.
 	
-	aThemer := self themer popupThemer.
+	self shadowWidth: Smalltalk ui theme glamourPopupShadowWidth.
+	self shadowColor: Smalltalk ui theme glamourPopupShadowColor.
+	self shadowOffset: Smalltalk ui theme glamourPopupShadowOffset.
+	self shadowInset: Smalltalk ui theme glamourPopupShadowInset.
 
-	self color: aThemer backgroundColor.
-	self borderWidth: aThemer borderWidth.
-	self borderColor: aThemer borderColor.
-
-	self inset: aThemer inset.
-	self spacing: aThemer spacing.
-	
-	self shadowWidth: aThemer shadowWidth.
-	self shadowColor: aThemer shadowColor.
-	self shadowOffset: aThemer shadowOffset.
-	self shadowInset: aThemer shadowInset.
-
-	self contentBrick padding: aThemer contentPadding.
-	self contentBrick color: aThemer contentBackgroundColor.
+	self contentBrick padding: Smalltalk ui theme glamourPopupContentPadding.
+	self contentBrick color: Smalltalk ui theme glamourPopupContentBackgroundColor.
 	self updateTriggerBrick
 ]
 
@@ -480,6 +477,6 @@ GLMEmptyPopupBrick >> updateInsetAndSpacing [
 GLMEmptyPopupBrick >> updateTriggerBrick [
 	| aTriggerImage |
 	
-	aTriggerImage := self anchorBrick brickImageForm: self themer popupThemer backgroundColor.
+	aTriggerImage := self anchorBrick brickImageForm: Smalltalk ui theme backgroundColor.
 	self triggerBrick icon: aTriggerImage
 ]

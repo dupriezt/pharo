@@ -90,7 +90,7 @@ GLMPopupBrick >> hintBrick: anObject [
 	
 	
 	self hintBrick
-		textColor: self themer popupThemer textColor.
+		textColor: Smalltalk ui theme glamourPopupTextColor.
 		
 	self contentBrick addBrickBack: self hintBrick
 ]
@@ -153,7 +153,7 @@ GLMPopupBrick >> titleBrick: aBrick [
 	titleBrick := aBrick.
 	
 	self titleBrick
-		textColor: self themer popupThemer textColor.
+		textColor: Smalltalk ui theme glamourPopupTextColor.
 		
 	self contentBrick addBrickFirst: self titleBrick
 ]

@@ -349,6 +349,11 @@ PharoDarkTheme >> glamourButtonSelectedColor [
 	^ Color veryDarkGray lighter slightlyDarker
 ]
 
+{ #category : #'accessing colors' }
+PharoDarkTheme >> glamourContentBackgroundColor [
+	^ Color darkGray darker
+]
+
 { #category : #'initialize-release' }
 PharoDarkTheme >> initialize [
 	"self beCurrent"
