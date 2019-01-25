@@ -98,7 +98,7 @@ GTSpotterTriangleRenderer >> renderLeftTriangle: aBrick on: aCanvas [
 GTSpotterTriangleRenderer >> renderRightTriangle: aBrick on: aCanvas [
 	|a b c width height gap|
 	
-	gap := aBrick themer spotterThemer previewArrowGapHack.
+	gap := Smalltalk ui theme glamourPreviewArrowGapHack.
 	aCanvas fillRectangle: (aBrick brickBounds withWidth: ((gap - self border)max:0)) color: aBrick color.
 	
 	width := aBrick brickBounds width - gap.

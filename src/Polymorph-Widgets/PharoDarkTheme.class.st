@@ -331,6 +331,24 @@ PharoDarkTheme >> glamorousNormalFillStyleWithBaseColor: aColor for: aMorph heig
 		radial: false
 ]
 
+{ #category : #'accessing colors' }
+PharoDarkTheme >> glamourButtonBackgroundColor [
+
+	^ Color veryDarkGray lighter
+]
+
+{ #category : #'accessing colors' }
+PharoDarkTheme >> glamourButtonPressedColor [
+
+	^ self glamourBackgroundColor whiter
+]
+
+{ #category : #'accessing colors' }
+PharoDarkTheme >> glamourButtonSelectedColor [
+
+	^ Color veryDarkGray lighter slightlyDarker
+]
+
 { #category : #'initialize-release' }
 PharoDarkTheme >> initialize [
 	"self beCurrent"

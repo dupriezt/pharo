@@ -7,7 +7,7 @@ Class {
 { #category : #rows }
 GTPlayBindingThemer >> borderColor [
 
-	^ self themer popupThemer borderColor
+	^ Smalltalk ui theme borderColor
 ]
 
 { #category : #rows }
@@ -19,7 +19,7 @@ GTPlayBindingThemer >> borderWidth [
 { #category : #'empty-text' }
 GTPlayBindingThemer >> emptyTextColor [
 
-	^ self themer textLightColor
+	^ Smalltalk ui theme glamourLightTextColor 
 ]
 
 { #category : #'empty-text' }

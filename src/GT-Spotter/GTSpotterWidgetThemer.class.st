@@ -371,7 +371,7 @@ GTSpotterWidgetThemer >> hintRevealArrowStyleFor: aBrick [
 	aBrick setProperty: #brickSpotterBackupColor toValue: aBrick color.
 	aBrick setProperty: #brickSpotterIsReveal toValue: true.
 	
-	aBrick color: self themer popupHelpThemer backgroundColor.
+	aBrick color: Smalltalk ui theme glamourPopupHelperBackgroundColor.
 	
 	aBrick changed
 ]
@@ -390,10 +390,10 @@ GTSpotterWidgetThemer >> hintRevealStyleFor: aBrick [
 	aBrick setProperty: #brickSpotterBackupBorder toValue: aBrick border.
 	aBrick setProperty: #brickSpotterIsReveal toValue: true.
 	
-	aBrick color: self themer popupHelpThemer backgroundColor.
+	aBrick color: Smalltalk ui theme glamourPopupHelperBackgroundColor.
 	aBrick border: GLMBrickBorder new.
-	aBrick borderColor: (self themer popupHelpThemer borderColor alpha: 0.6).
-	aBrick borderWidth: self themer popupHelpThemer borderWidth.
+	aBrick borderColor: (Smalltalk ui theme glamourPopupHelperBorderColorWithAlpha).
+	aBrick borderWidth: Smalltalk ui theme borderWidth .
 	
 	aBrick changed
 ]
@@ -860,5 +860,5 @@ GTSpotterWidgetThemer >> titleMarginLeft [
 { #category : #values }
 GTSpotterWidgetThemer >> titleTextColor [
 
-	^ self themer textLightColor
+	^ Smalltalk ui theme glamourLightTextColor
 ]

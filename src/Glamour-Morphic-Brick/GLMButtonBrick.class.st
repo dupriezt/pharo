@@ -129,14 +129,14 @@ GLMButtonBrick >> text: aString [
 { #category : #'button-updating' }
 GLMButtonBrick >> updateStyle [
 
-	self borderWidth: self themer buttonBorderWidth.
-	self borderColor: self themer buttonBorderColor.
-	self padding: self themer buttonPadding.
-	self normalColor: self themer buttonBackgroundColor.
-	self selectedColor: self themer buttonSelectedColor.
-	self pressedColor: self themer buttonPressedColor.
-	self minWidth: self themer buttonMinWidth.
-	self minHeight: self themer buttonMinHeight.
+	self borderWidth: Smalltalk ui theme glamourButtonBorderWidth.
+	self borderColor: Smalltalk ui theme glamourButtonBorderColor.
+	self padding: Smalltalk ui theme glamourButtonPadding.
+	self normalColor: Smalltalk ui theme glamourButtonBackgroundColor.
+	self selectedColor: Smalltalk ui theme glamourButtonSelectedColor.
+	self pressedColor: Smalltalk ui theme glamourButtonPressedColor.
+	self minWidth: Smalltalk ui theme glamourButtonMinWidth.
+	self minHeight: Smalltalk ui theme glamourButtonMinHeight.
 	self doLayoutForce
 	
 ]

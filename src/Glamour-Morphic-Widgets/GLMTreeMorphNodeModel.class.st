@@ -195,7 +195,7 @@ GLMTreeMorphNodeModel >> resetContentsRecursively [
 { #category : #callbacks }
 GLMTreeMorphNodeModel >> rowMorphForColumn: aGlamourColumn [
 	| rowElements contentMorph tagMorphs |
-		
+
 	aGlamourColumn modifiedBlock
 		ifNil: [
 			contentMorph := (self containerTree glamourPresentation 
@@ -207,7 +207,7 @@ GLMTreeMorphNodeModel >> rowMorphForColumn: aGlamourColumn [
 				cancelOnFocusLost;
 				text: (self valueFor: aGlamourColumn);
 				hSpaceFill;
-				with: [ :b | b editBrick rubricBackgroundColor: b themer rubricBackgroundColor ];
+				with: [ :b | b editBrick rubricBackgroundColor: Smalltalk ui theme glamourBackgroundColor ];
 				when: #onEditMode do: [ self containerTree forceStopStepping ];
 				when: #onReadMode do: [ self containerTree resetStopStepping ];
 				when: #onSingleClicked do: [  :evt :brick | brick isReadMode ifTrue: [

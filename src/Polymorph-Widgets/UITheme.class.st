@@ -2302,6 +2302,92 @@ UITheme >> ghostTextColor [
 	^ Color lightGray
 ]
 
+{ #category : #'accessing colors' }
+UITheme >> glamourBackgroundColor [
+
+	^ Color transparent
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonBackgroundColor [
+
+	^ Color veryVeryLightGray lighter
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonBorderColor [
+	^ Color lightGray
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonBorderWidth [
+	^ 1
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonMinHeight [
+	^ 26 * World displayScaleFactor
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonMinWidth [
+	^ 70
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonPadding [
+	^ #(3 7)
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonPressedColor [
+
+	^ Color veryVeryLightGray lighter slightlyDarker slightlyDarker
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourButtonSelectedColor [
+
+	^ Color veryVeryLightGray lighter slightlyDarker
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourCheckboxBorderColor [
+	^ Color lightGray
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourCheckboxBorderWidth [
+	^ 2
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourCheckboxHeight [
+	^ 18
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourCheckboxWidth [
+	^ 18
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourLightTextColor [
+	^ Color gray
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupHelperBackgroundColor [
+
+	^ Color r: 220 g: 246 b: 255 range: 255
+]
+
+{ #category : #'accessing colors' }
+UITheme >> glamourPopupHelperBorderColorWithAlpha [
+
+	^ (Color r: 48 g:194 b:240 range: 255 ) alpha: 0.6
+]
+
 { #category : #'border-styles' }
 UITheme >> groupLabelBorderStyleFor: aGroupPanel [
 	"Answer the normal border style for a group label."

@@ -80,7 +80,7 @@ GLMBrickPropertiesTrait >> borderWidth: anObject [
 { #category : #'brick-properties' }
 GLMBrickPropertiesTrait >> color [
 
-	^ self valueOfProperty: #brickBackgroundColor ifAbsent: [ self themer backgroundColor ]
+	^ self valueOfProperty: #brickBackgroundColor ifAbsent: [ Smalltalk ui theme glamourBackgroundColor ]
 ]
 
 { #category : #'brick-properties' }

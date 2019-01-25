@@ -89,12 +89,12 @@ GLMCheckboxBrick >> check [
 GLMCheckboxBrick >> checkBrick: anObject [
 	checkBrick := anObject.
 	self box
-		borderColor: self themer checkboxBorderColor;
-		borderWidth: self themer checkboxBorderWidth;
+		borderColor: Smalltalk ui theme glamourCheckboxBorderColor;
+		borderWidth: Smalltalk ui theme glamourCheckboxBorderWidth;
 		vAlign: #center;
 		checkedImage: self themer checkboxCheckedImage;
-		width: self themer checkboxWidth;
-		height: self themer checkboxHeight.
+		width: Smalltalk ui theme glamourCheckboxWidth;
+		height: Smalltalk ui theme glamourCheckboxHeight.
 		
 	self addBrickFirst: self box
 ]

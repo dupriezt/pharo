@@ -285,6 +285,12 @@ GLMBrick >> changedWith: aBlock [
 ]
 
 { #category : #'brick-properties' }
+GLMBrick >> color [
+
+	^ self valueOfProperty: #brickBackgroundColor ifAbsent: [ Smalltalk ui theme glamourBackgroundColor ]
+]
+
+{ #category : #'brick-properties' }
 GLMBrick >> currentColor [
 	^ self color
 ]
